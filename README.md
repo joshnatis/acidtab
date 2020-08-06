@@ -29,6 +29,12 @@ And that's it!
 ![delete tab demo](screenshots/sc6.png)
 ![sample downloaded files](screenshots/sc7.png)
 
+## TRUST
+I trust this software, but you don't have to. It doesn't do anything stupid like close your tabs for you or otherwise meddle with your business. The only interaction the program has with your tabs is when you select one of the `Export tabs...` options in the pinned popup window, at which time it cycles through all of the tabs and copies their URL, title, and favicon. After that, it only deals with this data which has already been written down. But, like I said, you don't have to trust that this software works. You can download a snapshot of the page with your tabs as many times as you want (file is timestamped), or export the tabs as a txt file as many times as you want (also timestamped). Once you have the data downloaded and assured that it's to your liking, it's not going anywhere (unless you lose your hard drive in a freak accident, but that's on you, chief).
+
+#### PERSISTENCE OF YOUR TABS
+The program uses the [local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) browser API to store your tabs (as a JSON string). This storage persists until you clear the cache of your browser. Of course, to be truly safe, download your data.
+
 ## CONTRIBUTING
 
 ## LICENSE
