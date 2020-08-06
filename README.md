@@ -21,6 +21,14 @@ And that's it!
 
 ## SCREENSHOTS
 
+![popup](screenshots/sc1.png)
+![main view](screenshots/sc2.png)
+![search demo](screenshots/sc3.png)
+![import demo](screenshots/sc4.png)
+![import formats](screenshots/sc5.png)
+![delete tab demo](screenshots/sc6.png)
+![sample downloaded files](screenshots/sc7.png)
+
 ## CONTRIBUTING
 
 ## LICENSE
