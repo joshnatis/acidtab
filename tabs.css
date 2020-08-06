@@ -1,0 +1,266 @@
+body
+{
+	background-image: url("bg.png");
+	background-size: 64px 64px;
+}
+
+.tablinks
+{
+	width: 100%;
+	display: block;
+	margin-top: 0.2%;
+	text-decoration: none;
+	color: black;
+	font-family: "Georgia", Serif;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.tab
+{
+	width: 95%;
+	display: block;
+	border: 2px solid black;
+	background-color: white;
+	text-decoration: none;
+	padding: 2.3%;
+	border-radius: 14px;
+	cursor: pointer;
+}
+
+.clear
+{
+	display: none;
+	position: absolute;
+	right:5px;
+	top:1px;
+	background-color: gray;
+	color: white;
+	padding-left: 0.7%;
+	padding-right: 0.7%;
+	padding-bottom: 0.1%;
+	border: 2px solid black;
+	border-radius: 40px;
+	cursor: pointer;
+	font-size: 50%;
+}
+
+.clear:hover
+{
+	background-color: #444;
+}
+
+.subcontainer
+{
+	position: relative;
+	width: 35%;
+}
+
+.tab p
+{
+	display: inline;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	word-break: break-all;
+	word-break: break-word;
+}
+
+.tab:hover
+{
+	background-color: lightgray;
+}
+
+.favicon
+{
+	display: block;
+	float: left;
+	width: 1.5em;
+	margin-right: 1%;
+}
+
+#search
+{
+	border: 2px solid black;
+	border-radius: 4px;
+	padding: 0.5%;
+	outline:none;
+	margin-bottom: 1%;
+	transition: all .2s linear;
+}
+
+#search:hover
+{
+	margin-left: 0.3%;
+	transform: scale(1.05);
+}
+
+#search:focus
+{
+	border-color:#4d90fe;
+}
+
+#btns
+{
+	float: right;
+	margin-right: 0.5%;
+}
+
+#numtabs
+{
+	display: inline-block;
+	background-color: white;
+	color: black;
+	font-family: "Georgia", Serif;
+	border: 2px solid black;
+	border-radius: 14px;
+	padding: 0.3%;
+}
+
+button
+{
+	font-family: "Georgia", Serif;
+	cursor: pointer;
+}
+
+.dialog
+{
+	font-family: "Georgia", Serif;
+	position: absolute;
+	width: 45%;
+	height: auto;
+	top: 25%;
+	left: 25%;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 14px;
+	padding: 0% 1% 0% 1%;
+	font-size: 2em;
+	z-index: 1;
+	box-shadow: 5px 10px;
+}
+
+#import_dialog
+{
+	height: 50%;
+}
+
+.overlay
+{
+	position: fixed;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.4);
+}
+
+.x
+{
+	background-color: red;
+	color: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	float: right;
+	padding-left: 1%;
+	padding-right: 1%;
+	margin-top: 3%;
+	cursor: pointer;
+}
+
+.x:hover
+{
+	background-color: darkred;
+}
+
+.directions
+{
+	display: inline-block;
+	margin-bottom: 2%;
+	margin-top: 3%;
+}
+
+.error_text
+{
+	display: block;
+	font-family: monospace;
+	color: red;
+	font-size: 0.8em;
+}
+
+form
+{
+	margin-left: 3%;
+}
+
+textarea
+{
+	width: 80%;
+	height: 15em;
+	display: block;
+	margin-top: 2%;
+	resize: none;
+}
+
+#checkbox_caption
+{
+	vertical-align: center;
+	display: inline-block;
+	font-size: 62%;
+	margin:0;
+	margin-left: 2px;
+	transform: translateY(2px);
+}
+
+#checkbox
+{
+	margin-top:0;
+	margin-left: 1em;
+	vertical-align: bottom;
+}
+
+#submit {margin-left: 3%; cursor: pointer;}
+
+@media screen and (max-width: 1150px) {
+	.subcontainer { width: 45%; }
+}
+
+@media screen and (max-width: 1120px) {
+	.dialog { width: 60%; }
+}
+
+@media screen and (max-width: 850px) {
+	.subcontainer { width: 55%; }
+	.dialog { left: 10%; width: 75%; }
+}
+
+@media screen and (max-width: 710px) {
+	button { display: block;}
+}
+
+@media screen and (max-width: 670px) {
+	.dialog { font-size: 1.7em; padding-left: 2%; }
+}
+
+@media screen and (max-width: 650px) {
+	.subcontainer { width: 65%; }
+}
+
+@media screen and (max-width: 570px) {
+	.x { float: none; display: inline-block; position: absolute; top: 0%; right: 5%;}
+}
+
+@media screen and (max-width: 450px) {
+	.subcontainer { width: 80%; margin-top: 0.4%; }
+	#btns { float: none;}
+	button { margin-top: 1%; padding: 1%; border: 2px solid black;}
+}
+
+@media screen and (max-height: 700px) { #import_dialog { height: 55%; } }
+@media screen and (max-height: 630px) { #import_dialog { height: 60%; } }
+@media screen and (max-height: 570px) { #import_dialog { height: 70%; } }
+
+@media screen and (max-height: 490px) {
+	.dialog { top: 5%; }
+	#import_dialog { height: 80%; }
+}

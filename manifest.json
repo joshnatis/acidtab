@@ -1,0 +1,18 @@
+{
+  "name": "acid",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Acid Tab Manager",
+    "default_icon": { "32": "blob32.png" }
+  }
+}

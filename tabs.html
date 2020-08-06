@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8"/>
+	<title>Acid Tab Manager</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" href="tabs.css">
+	<link rel="icon" href="blob32.png">
+</head>
+
+<body>
+	<input type="search" spellcheck="false" autocomplete="off" id="search" placeholder="Search for a tab...">
+	<h3 id="numtabs"></h3>
+	<div id="btns">
+		<button id="download">Download this page</button>
+		<button id="exportData">Export as text</button>
+		<button id="importData">Import tabs</button>
+		<button id="clearAll">Clear all</button>
+		<button id="openAll">Open all</button>
+	</div>
+	<div id="container">
+		<!-- populate tabs here -->
+	</div>
+	<script src="tabs_local.js"></script>
+	<script src="tabs.js"></script>
+</body>
