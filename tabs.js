@@ -302,9 +302,9 @@ function createAndShowDialogBox()
 	div.appendChild(p);
 	div.appendChild(x);
 	div.appendChild(form);
-	div.append(submit);
-	div.append(checkbox);
-	div.append(checkbox_caption);
+	div.appendChild(submit);
+	div.appendChild(checkbox);
+	div.appendChild(checkbox_caption);
 
 	let body = document.querySelector("body");
 	body.appendChild(overlay);
