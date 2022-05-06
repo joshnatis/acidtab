@@ -24,7 +24,7 @@ function populateTabs(tabs)
 		p.innerText = tabs[i].title;
 
 		let favicon = document.createElement("img");
-		favicon.src = ('favicon' in tabs[i]) ? tabs[i].favicon : "blob32.png";
+		favicon.src = ("favicon" in tabs[i]) ? tabs[i].favicon : "blob32.png";
 		favicon.className = "favicon";
 
 		tab_div.appendChild(favicon);
@@ -32,7 +32,8 @@ function populateTabs(tabs)
 
 		let a = document.createElement("a");
 		a.href = tabs[i].url;
-		a.target = "_blank";
+		let target = ("windowId" in tabs[i]) ? tabs[i].windowId : "_blank";
+		a.target = target;
 		a.className = "tablinks";
 		a.appendChild(tab_div);
 
@@ -134,7 +135,7 @@ function getDate()
 	let hr = String(today.getHours()).padStart(2, '0');
 	let min = String(today.getMinutes()).padStart(2, '0');
 
-	today = mm + '_' + dd + '_' + yyyy + "_" + hr + "-" + min;
+	today = mm + "_" + dd + "_" + yyyy + "_" + hr + "-" + min;
 	return today;
 }
 
@@ -505,5 +506,21 @@ function clearAllTabs()
 function openAllTabs()
 {
 	let tablinks = document.getElementsByClassName("tablinks");
-	[...tablinks].forEach(tab => window.open(tab, "_blank"));
+	let windows = {};
+	[...tablinks].forEach(tab => {
+		if (tab.target in windows)
+			windows[tab.target].push(tab.href);
+		else
+			windows[tab.target] = [tab.href];
+	});
+
+	for(let id in windows)
+	{
+		chrome.windows.create({
+			focused: false,
+			state: "minimized",
+			url: windows[id]
+		});
+	}
+	return;
 }

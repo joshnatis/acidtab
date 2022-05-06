@@ -16,7 +16,7 @@ function populateTabs(tabs)
 		p.innerText = tabs[i].title;
 
 		let favicon = document.createElement("img");
-		favicon.src = ('favicon' in tabs[i]) ? tabs[i].favicon : "blob32.png";
+		favicon.src = ("favicon" in tabs[i]) ? tabs[i].favicon : "blob32.png";
 		favicon.className = "favicon";
 
 		tab_div.appendChild(favicon);
@@ -68,7 +68,7 @@ function getDate()
 	let hr = String(today.getHours()).padStart(2, '0');
 	let min = String(today.getMinutes()).padStart(2, '0');
 
-	today = mm + '_' + dd + '_' + yyyy + "_" + hr + "-" + min;
+	today = mm + "_" + dd + "_" + yyyy + "_" + hr + "-" + min;
 	return today;
 }
 

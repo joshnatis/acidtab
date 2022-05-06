@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		function(tabs) {
 			let tabs_collection = [];
 			for(let i = 0; i < tabs.length; ++i)
-				tabs_collection.push({"url": tabs[i].url, "title": tabs[i].title, "favicon": tabs[i].favIconUrl});
+				tabs_collection.push({"url": tabs[i].url,
+					"title": tabs[i].title,
+					"favicon": tabs[i].favIconUrl,
+					"windowId": tabs[i].windowId
+				});
 			localStorage["tabs"] = JSON.stringify(tabs_collection);
 			window.open("./tabs.html");
 		})
@@ -20,7 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		chrome.tabs.query({}, function(tabs) {
 			let tabs_collection = [];
 			for(let i = 0; i < tabs.length; ++i)
-				tabs_collection.push({"url": tabs[i].url, "title": tabs[i].title, "favicon": tabs[i].favIconUrl});
+				tabs_collection.push({"url": tabs[i].url,
+					"title": tabs[i].title,
+					"favicon": tabs[i].favIconUrl,
+					"windowId": tabs[i].windowId
+				});
 			localStorage["tabs"] = JSON.stringify(tabs_collection);
 			window.open("./tabs.html");
 		})
@@ -30,5 +38,3 @@ document.addEventListener('DOMContentLoaded', function() {
 		window.open("./tabs.html");
 	}
 }, false)
-
-//todo: windows?
