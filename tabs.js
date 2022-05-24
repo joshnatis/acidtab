@@ -449,7 +449,7 @@ function processPlaintextInput(tabs)
 		tabs.forEach(url => {
 			console.log(url);
 			let obj = {};
-			obj.url = url;
+			obj.url = url.includes("://") ? url : ("http://" + url);
 			obj.title = url;
 			obj.favicon = "https://s2.googleusercontent.com/s2/favicons?domain=" + url;
 			stored.push(obj);
